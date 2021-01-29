@@ -1,7 +1,7 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
-import { SpinnerService } from '../core/services/spinner.service';
+import { Post } from './post';
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-post',
@@ -10,10 +10,12 @@ import { SpinnerService } from '../core/services/spinner.service';
 })
 export class PostComponent implements OnInit {
 
-    showSpinner: boolean = false;
+    posts: Post[] = [];
 
-    constructor(private changeDetectorRef: ChangeDetectorRef,
-        public spinnerService: SpinnerService) {
+    constructor(postService: PostService) {
+      postService.getPosts().subscribe(posts => {
+        this.posts = posts;
+      });
     }
 
     ngOnInit() {

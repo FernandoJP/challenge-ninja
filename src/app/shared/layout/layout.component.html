@@ -1,0 +1,59 @@
+<div class="navbar-container">
+
+  <!-- Top navbar -->
+  <mat-toolbar class="navbar" color="primary">
+
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <a class="navbar-brand" [routerLink]="['/']" matTooltip="Home">
+      <h1>
+        angular-material-template
+      </h1>
+    </a>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container class="navbar-sidenav-container">
+    <!-- Side nav -->
+    <mat-sidenav #snav [opened]="true" [mode]="'side'"
+      [fixedInViewport]="true" fixedTopGap="56" class="sidenav">
+
+      <mat-nav-list>
+        <h3 mat-subheader>Home</h3>
+
+        <a mat-list-item [routerLink]="['/posts']" routerLinkActive="active">
+          <mat-icon mat-list-icon>
+            post_add
+          </mat-icon>
+          <p mat-line> Posts </p>
+        </a>
+        
+        <a mat-list-item [routerLink]="['/users']" routerLinkActive="active">
+          <mat-icon mat-list-icon>
+            people
+          </mat-icon>
+          <p mat-line> Users </p>
+        </a>
+        
+      </mat-nav-list>
+
+    </mat-sidenav>
+
+    <!-- Main content -->
+    <mat-sidenav-content class="sidenav-content">
+
+      <div class="progress-bar-container">
+        <mat-progress-bar color="accent" mode="indeterminate" *ngIf="spinnerService.visibility | async">
+        </mat-progress-bar>
+        <!-- <mat-spinner class="spinner" [diameter]="50" *ngIf="showSpinner"></mat-spinner> -->
+      </div>
+
+
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>

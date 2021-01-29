@@ -1,15 +1,13 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 
-import { SpinnerService } from '../core/services/spinner.service';
+import { SpinnerService } from 'src/app/core/services/spinner.service';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss']
 })
-export class PostComponent implements OnInit {
-
+export class LayoutComponent implements OnInit {
     showSpinner: boolean = false;
 
     constructor(private changeDetectorRef: ChangeDetectorRef,

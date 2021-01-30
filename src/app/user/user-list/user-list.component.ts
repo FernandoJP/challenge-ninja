@@ -16,7 +16,6 @@ export class UserListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.users);
     this.dataSource = this.users.map(user => {
       return {
         id: user.id,

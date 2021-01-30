@@ -1,0 +1,16 @@
+.user-address-details {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.user-author {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding: 8px;
+}
+
+mat-dialog-container {
+  width: 80vw;
+}

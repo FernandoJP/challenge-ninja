@@ -1,3 +1,3 @@
 <app-card title="Posts">
-    <app-post-list [posts]="posts"></app-post-list>
+    <app-post-list [posts]="posts" *ngIf="posts.length > 0"></app-post-list>
 </app-card>

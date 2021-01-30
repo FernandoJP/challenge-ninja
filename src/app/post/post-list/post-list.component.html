@@ -1,3 +1,11 @@
-<mat-card *ngFor="let post of postsView" class="mat-elevation-z4" color="primary">
-    {{post | json}}
+<mat-card *ngFor="let post of postsView" class="mat-elevation-z4" color="primary" (click)="openPostDetailsDialog(post)">
+    <div class="post-author">
+        <mat-icon aria-hidden="true">account_circle</mat-icon>
+        <div class="author-text">
+            By <strong>{{post.user.name}}</strong>
+        </div>
+    </div>
+    <div>
+        <h2 class="post-title">{{post.title}}</h2>
+    </div>
 </mat-card>

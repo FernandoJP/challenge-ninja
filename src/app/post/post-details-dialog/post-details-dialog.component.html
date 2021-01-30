@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{data.post.title}}</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="user-details">
+        <div class="user-author">Author: <strong>{{data.post.user.name}}</strong> ({{data.post.user.username}})</div>
+        <address class="user-address-details">
+            <span>E-mail: {{data.post.user.email}}</span>
+            <span>Contact information: {{data.post.user.phone}}</span>
+            <span>Website: <a href="{{data.post.user.website}}">{{data.post.user.website}}</a></span>
+        </address>
+    </div>
+  <p>{{data.post.body}}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

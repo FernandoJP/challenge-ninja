@@ -1,6 +1,24 @@
 mat-card {
   flex: 0 0 calc(33.33% - 63px);
   margin: 15px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
   background-color: #00bfa5;
   color: #fff;
+  padding: 15px;
+
+  .author-text {
+    margin-left: 10px;
+  }
+}
+
+.post-title {
+  font-weight: 200;
+  padding-top: 10px;
+  padding: 15px;
 }

@@ -5,6 +5,11 @@ export interface User {
     email: string;
     website: string;
     phone: string;
+    company: {
+      bs: string,
+      catchPhrase: string,
+      name: string
+    }
     address: {
       street: string;
       suite: string;

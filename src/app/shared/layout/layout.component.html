@@ -17,26 +17,25 @@
 
   <mat-sidenav-container class="navbar-sidenav-container">
     <!-- Side nav -->
-    <mat-sidenav #snav [opened]="true" [mode]="'side'"
-      [fixedInViewport]="true" fixedTopGap="56" class="sidenav">
+    <mat-sidenav #snav [opened]="true" [mode]="'side'" [fixedInViewport]="true" fixedTopGap="56" class="sidenav">
 
       <mat-nav-list>
         <h3 mat-subheader>Home</h3>
 
-        <a mat-list-item [routerLink]="['/']" routerLinkActive="active">
+        <a mat-list-item [routerLink]="['/posts']" routerLinkActive="active">
           <mat-icon mat-list-icon>
             post_add
           </mat-icon>
           <p mat-line> Posts </p>
         </a>
-        
+
         <a mat-list-item [routerLink]="['/users']" routerLinkActive="active">
           <mat-icon mat-list-icon>
             people
           </mat-icon>
           <p mat-line> Users </p>
         </a>
-        
+
       </mat-nav-list>
 
     </mat-sidenav>

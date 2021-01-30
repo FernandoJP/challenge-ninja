@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostModule } from './post/post.module';
 import { LayoutModule } from './shared/layout/layout.module'
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LayoutModule } from './shared/layout/layout.module'
     AppRoutingModule,
     PostModule,
     LayoutModule,
+    UserModule,
     BrowserAnimationsModule
   ],
   providers: [],

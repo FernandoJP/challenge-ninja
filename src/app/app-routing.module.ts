@@ -8,7 +8,7 @@ import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
     {
-        path: 'posts',
+        path: '',
         component: LayoutComponent,
         children: [
           { path: '', component: PostComponent },
